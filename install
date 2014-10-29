@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+curdir=`pwd`
+
+for dockerfile in {centos,debian}/*/**/Dockerfile ; do
+	cd $curdir
+
+	dockerfile_dir=$(dirname $dockerfile)
+	image_name=$(head -n1 $dockerfile | tr -d '#')
+
+	cd $dockerfile_dir && docker build -t $image_name .
+done
