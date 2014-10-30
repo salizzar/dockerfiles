@@ -5,7 +5,6 @@ FROM		debian:7
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
 ENV		HOME		/root
-ENV		RUBYPATH	$HOME/ruby
 
 RUN		apt-get update &&	\
 		apt-get install -y 	\
@@ -14,7 +13,6 @@ RUN		apt-get update &&	\
 		g++			\
 		make			\
 		ruby &&			\
-		apt-get clean &&	\
-		mkdir -p $RUBYPATH/src
+		apt-get clean
 
-WORKDIR		/root/ruby/src
+WORKDIR		/root

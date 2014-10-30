@@ -5,7 +5,6 @@ FROM		centos:centos7
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
 ENV		HOME		/root
-ENV		RUBYPATH	$HOME/ruby
 
 RUN		yum install -y		\
 		gcc			\
@@ -14,7 +13,6 @@ RUN		yum install -y		\
 		ruby-devel		\
 		rubygem-bundler		\
 		patch			\
-		tar &&			\
-		mkdir -p $RUBYPATH/src
+		tar
 
-WORKDIR		/root/ruby/src
+WORKDIR		/root
