@@ -11,8 +11,10 @@ RUN		yum install -y		\
 		gcc			\
 		gcc-c++			\
 		make			\
-		ruby			\
-		rubygem-bundler &&	\
+		ruby-devel		\
+		rubygem-bundler		\
+		patch			\
+		tar &&			\
 		mkdir -p $RUBYPATH/src
 
 WORKDIR		/root/ruby/src
