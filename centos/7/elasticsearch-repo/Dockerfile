@@ -1,7 +1,7 @@
-# salizzar/centos-7-elasticsearch-base
+# salizzar/centos-7-repo-elasticsearch
 # VERSION	0.0.1
 
-FROM		centos:centos7
+FROM		salizzar/centos-7-java
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
 ENV		HOME	/root
