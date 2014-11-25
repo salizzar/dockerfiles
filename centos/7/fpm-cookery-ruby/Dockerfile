@@ -1,0 +1,13 @@
+# salizzar/centos-7-fpm-cookery-ruby
+# VERSION	0.0.1
+
+FROM		salizzar/centos-7-ruby
+MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
+
+ENV		HOME		/root
+
+RUN		rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/l/lbzip2-2.5-1.el7.x86_64.rpm && \
+		yum install -y rpm-build && \
+		gem install --no-ri --no-rdoc fpm-cookery
+
+WORKDIR		/root
