@@ -1,0 +1,4 @@
+[thoughtworks-go]
+name=ThoughtWorks Go Repository
+baseurl=http://dl.bintray.com/gocd/gocd-rpm/
+gpgcheck=0
