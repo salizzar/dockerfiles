@@ -4,10 +4,12 @@
 FROM		salizzar/centos-7-repo-thoughtworks-go
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
-RUN		yum install -y go-server				&&	\
+RUN		yum install -y git go-server				&&	\
 		/etc/init.d/go-server stop				&&	\
 		sed -iE 's/DAEMON=Y/DAEMON=N/' /etc/default/go-server
 
+ENV		HOME /var/go
+WORKDIR		/var/go
 USER		go
 
 EXPOSE		8153
