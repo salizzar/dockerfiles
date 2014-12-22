@@ -13,7 +13,8 @@ RUN		yum install -y		\
 		tar			\
 		mariadb-devel		\
 		postgresql-devel	\
-		sqlite-devel
+		sqlite-devel		\
+		rpm-build
 
 # enable sudo for go user
 RUN		yum install -y sudo								&&	\
