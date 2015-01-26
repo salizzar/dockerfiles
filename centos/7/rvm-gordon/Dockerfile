@@ -4,6 +4,7 @@
 FROM		centos:centos7
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
+ENV		HOME	/root
 WORKDIR		/root
 
 RUN		yum install -y curl tar git			&&	\
