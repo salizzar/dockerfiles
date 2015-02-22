@@ -12,8 +12,6 @@ RUN		yum install -y curl tar git			&&	\
 		echo 'source /etc/profile.d/rvm.sh' >> .bashrc
 
 RUN		yum install -y						\
-		git							\
-		tar							\
 		mariadb-devel						\
 		postgresql-devel					\
 		sqlite-devel						\
