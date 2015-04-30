@@ -1,11 +1,11 @@
 # salizzar/debian-7-golang
-# VERSION	0.0.1
+# VERSION	0.0.2
 
 FROM		debian:7
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
-ENV		HOME	/root
-ENV		GOPATH	$HOME/golang
+ENV		HOME	/usr/local/go
+ENV		GOPATH	$HOME
 ENV		PATH	$PATH:$GOPATH/bin
 
 RUN		apt-get update && 	\
@@ -19,4 +19,4 @@ RUN		apt-get update && 	\
 		apt-get clean && 	\
 		mkdir -p $GOPATH/{bin,src,pkg}
 
-WORKDIR		/root/golang/src
+WORKDIR		/usr/local/go/src

@@ -1,11 +1,11 @@
 # salizzar/centos-7-golang
-# VERSION	0.0.1
+# VERSION	0.0.2
 
 FROM    	centos:centos7
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
-ENV     	HOME    /root
-ENV     	GOPATH  $HOME/golang
+ENV     	HOME    /usr/local/go
+ENV     	GOPATH  $HOME
 ENV     	PATH    $PATH:$GOPATH/bin
 
 RUN     	yum install -y	\
@@ -17,4 +17,5 @@ RUN     	yum install -y	\
 		subversion && 	\
         	mkdir -p $GOPATH/{bin,src,pkg}
 
-WORKDIR		/root/golang/src
+WORKDIR		/usr/local/go
+
