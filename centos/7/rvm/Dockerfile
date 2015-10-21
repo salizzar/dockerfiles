@@ -12,6 +12,6 @@ RUN		yum install -y curl tar git 					&&	\
 		echo 'source /etc/profile.d/rvm.sh'	>> /root/.bashrc	&&	\
 		echo 'rvm_install_on_use_flag=1'	 > /root/.rvmrc
 
-RUN		/bin/bash -l -c "rvm install 2.1.5"				&&	\
-		/bin/bash -l -c "rvm install 2.2.0"
+RUN		/bin/bash -l -c "rvm install 2.1.7"				&&	\
+		/bin/bash -l -c "rvm install 2.2.3"
 

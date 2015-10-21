@@ -10,6 +10,6 @@ RUN		yum install -y							\
 		sqlite-devel							\
 		rpm-build
 
-RUN		/bin/bash -l -c "rvm use 2.1.5 ; gem install gordon"	&&	\
-		/bin/bash -l -c "rvm use 2.2.0 ; gem install gordon"
+RUN		/bin/bash -l -c "rvm use 2.1.7 ; gem install bundler gordon"	&&	\
+		/bin/bash -l -c "rvm use 2.2.3 ; gem install bundler gordon"
 
