@@ -9,4 +9,7 @@ for dockerfile in {centos,debian}/*/**/Dockerfile ; do
 	image_name=$(head -n1 $dockerfile | tr -d '#')
 
 	cd $dockerfile_dir && docker build -t $image_name .
+	if [ ! $? -eq 0 ] ; then
+		echo "FAILED: ${image_name}"
+	fi
 done

@@ -1,10 +1,11 @@
 # salizzar/centos-7-geminabox
 # VERSION	0.0.1
 
-FROM		salizzar/centos-7-ruby
+FROM		salizzar/centos-7-rvm
 MAINTAINER	Marcelo Pinheiro <salizzar@gmail.com>
 
-RUN		gem install geminabox unicorn
+RUN		bash -l -c 'rvm use 2.3.0'			&&	\
+		bash -l -c 'gem install geminabox unicorn'
 
 RUN		mkdir /geminabox
 COPY		files/geminabox/config.ru /geminabox/
