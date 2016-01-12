@@ -1,4 +1,4 @@
-# salizzar/debian-7-fpm-cookery-ruby
+# salizzar/debian-7-fpm-cookery
 # VERSION	0.0.1
 
 FROM		salizzar/debian-7-ruby

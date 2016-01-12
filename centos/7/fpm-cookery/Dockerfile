@@ -1,4 +1,4 @@
-# salizzar/centos-7-fpm-cookery-ruby
+# salizzar/centos-7-fpm-cookery
 # VERSION	0.0.1
 
 FROM		salizzar/centos-7-ruby
